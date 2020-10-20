@@ -22,16 +22,32 @@ public class NumToWords {
 		switch(i) {
 		
 		case 1:
-			numText = "ONE";break;
+			numText = "ONE";
+			break;
 		case 2:
-			numText = "TWO";break;
+			numText = "TWO";
+			break;
 		case 3:
-			numText = "THREE";break;
+			numText = "THREE";
+			break;
 		case 4:
-			numText = "FOUR";break;
+			numText = "FOUR";
+			break;
 		case 5:
-			numText = "FIVE";break;
-		// complete the code.
+			numText = "FIVE";
+			break;
+		case 6:
+			numText = "SIX";
+			break;
+		case 7:
+			numText = "SEVEN";
+			break;
+		case 8:
+			numText = "EIGHT";
+			break;
+		case 9:
+			numText = "NINE";
+			break;
 		default:
 			numText = "NUMBER " + i;
 		}
