@@ -1,7 +1,5 @@
 package sef.module6.activity;
 
-
-
 public class InheritanceActivity {
 
 	public static void main(String[] args) {
@@ -9,7 +7,6 @@ public class InheritanceActivity {
 		// Create Person object p. Write code to and set name of Person as Sarah Johnson
 		// and age as 21
 		Person_I p = new Person_I("Sarah Johnson", 21);
-		
 		
 		System.out.println("-----------------------------");
 		//Create Employee object e and 
@@ -31,10 +28,6 @@ public class InheritanceActivity {
 		// Print Info using Person object
 		System.out.println("-----------------------------");
 		System.out.println("Person's Name is    : " + p.getName());
-		System.out.println("Person's Age is     : " + p.getAge());
-		
-			
-		
+		System.out.println("Person's Age is     : " + p.getAge());	
 	}
-
 }
