@@ -34,10 +34,5 @@ public class CalculatorClient {
 		// Divide
 		result = normalCalc.divide(49, 7);
 		System.out.println("4) Division of numbers is " + result);
-
 	}
-
-
-	
-
 }
