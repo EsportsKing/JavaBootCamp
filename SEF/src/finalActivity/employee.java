@@ -38,7 +38,7 @@ public class employee extends person {
 	
 	// getter for String title
 	public String getTitle() {
-		return this.title;
+		return title;
 	}
 	
 	// setter for String title
