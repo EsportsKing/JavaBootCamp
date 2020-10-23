@@ -20,7 +20,7 @@ public class person {
 	
 	// Introduce function prints message and String name, int age
 	public void introduce() {
-		System.out.println("My name is " + this.name + " and i am " + this.age + " years old");
+		System.out.println("My name is " + this.name + " and I am " + this.age + " years old");
 	}
 	
 	// getter for String name
