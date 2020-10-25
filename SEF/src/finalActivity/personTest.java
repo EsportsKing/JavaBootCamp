@@ -31,13 +31,21 @@ public class personTest {
 	
 	@Test
 	public void testsetFirstName() {
-		person1.setFirstName("New Name");
+		try {
+			person1.setFirstName("New Name");
+		} catch (SetNameException e) {
+			e.getMessage();
+		}
 		assertEquals("New Name", person1.getFirstName());
 	}
 	
 	@Test
 	public void testsetSecondName() {
-		person1.setSecondName("Other Name");
+		try {
+			person1.setSecondName("Other Name");
+		} catch (SetNameException e) {
+			e.getMessage();
+		}
 		assertEquals("Other Name", person1.getSecondName());
 	}
 	

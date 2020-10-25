@@ -16,8 +16,18 @@ public class employee extends person {
 	
 	// Parameterized employee constructor
 	public employee(String firstName, String secondName, int age, String company, String title, int salary) {
-		this.setFirstName(firstName);
-		this.setSecondName(secondName);
+		try {
+			this.setFirstName(firstName);
+		} catch (SetNameException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			this.setSecondName(secondName);
+		} catch (SetNameException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.setAge(age);
 		this.company = company;
 		this.title = title;

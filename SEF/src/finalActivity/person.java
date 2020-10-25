@@ -16,8 +16,16 @@ public class person {
 	
 	// Parameterized Constructor
 	public person(String firstName, String secondName, int age) {
-		this.firstName = firstName;
-		this.secondName = secondName;
+		try {
+			this.setFirstName(firstName);
+		} catch (SetNameException e) {
+			e.getMessage();
+		}
+		try {
+			this.setSecondName(secondName);
+		} catch (SetNameException e) {
+			e.getMessage();
+		}
 		this.age = age;
 	}
 	
@@ -32,8 +40,20 @@ public class person {
 	}
 	
 	// setter for String firstName
-	public void setFirstName(String name) {
-		this.firstName = name;
+	public void setFirstName(String name)  throws SetNameException{
+		boolean flag = false;
+		char[] chars = name.toCharArray();
+	    for(char c : chars){
+		    if(Character.isDigit(c)){
+		    	flag = true;
+		    }
+	    }
+	    if (flag == true) {
+	    	throw new SetNameException();
+	    }
+	    else{
+	    	this.firstName = name;
+	    }
 	}
 	
 	// getter for String secondName
@@ -42,8 +62,20 @@ public class person {
 	}
 	
 	// setter for String secondName
-	public void setSecondName(String name) {
-		this.secondName = name;
+	public void setSecondName(String name)  throws SetNameException{
+		boolean flag = false;
+		char[] chars = name.toCharArray();
+	    for(char c : chars){
+		    if(Character.isDigit(c)){
+		    	flag = true;
+		    }
+	    }
+	    if (flag == true) {
+	    	throw new SetNameException();
+	    }
+	    else {
+	    	this.secondName = name;
+	    }	
 	}
 
 	// getter for int age
