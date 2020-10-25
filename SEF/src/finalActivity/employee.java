@@ -11,6 +11,7 @@ public class employee extends person {
 	public employee() {
 		this.company = "Unknown";
 		this.title = "Unknown";
+		this.salary = 0;
 	}
 	
 	// Parameterized employee constructor

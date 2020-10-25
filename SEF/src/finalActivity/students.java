@@ -26,7 +26,7 @@ public class students extends person  {
 	}
 	
 	// setter for String company
-	public void setCompany(String school) {
+	public void setSchoolName(String school) {
 		this.schoolName = school;
 	}
 }

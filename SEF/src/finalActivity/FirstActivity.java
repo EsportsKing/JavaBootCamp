@@ -1,18 +1,12 @@
 package finalActivity;
 
-import java.util.ArrayList;
-
 public class FirstActivity {
 
 	public static void main(String[] args) {
 		employee[] employeeList = new employee[5];
 		createEmployees(employeeList);
 		sortEmployees(employeeList);
-		for (int i = 0; i <5; i++) { 
-			System.out.println("My name is " + employeeList[i].getName() + " and I am " + employeeList[i].getAge() + " years old");
-			System.out.print("I am working as a " + employeeList[i].getTitle() + " at " + employeeList[i].getCompany() +" company");
-			System.out.println(" and my salary is $" + employeeList[i].getSalary());
-		}
+		printEmployees(employeeList);
 	}
 
 	public static void createEmployees(employee[] employeeList) {
@@ -26,16 +20,22 @@ public class FirstActivity {
 	public static void sortEmployees(employee[] employeeList) {
 		
 		int numberOfEmployees = employeeList.length;
-		boolean swapOccured = false;
 		
 		for (int i = 0; i < (numberOfEmployees -1); i++) {
 			if (employeeList[i].getSalary() < employeeList[i+1].getSalary()) {
 				employee smallerSalary = employeeList[i];
 				employeeList[i] = employeeList[i+1];
 				employeeList[i+1] = smallerSalary;
-				swapOccured = true;
 				i = 0;
 			}
 		}	 
+	}
+	
+	public static void printEmployees(employee[] employeeList) {
+		for (int i = 0; i <5; i++) { 
+			System.out.println("My name is " + employeeList[i].getName() + " and I am " + employeeList[i].getAge() + " years old");
+			System.out.print("I am working as a " + employeeList[i].getTitle() + " at " + employeeList[i].getCompany() +" company");
+			System.out.println(" and my salary is $" + employeeList[i].getSalary());
+		}
 	}
 }
