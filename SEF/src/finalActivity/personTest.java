@@ -8,16 +8,20 @@ import org.junit.Test;
 
 public class personTest {
 
-	private person person1 = new person("Eliza Luse", 27);
+	private person person1 = new person("Eliza", "Luse", 27);
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		System.out.println("Setting up person Test");
 	}
 	
 	@Test
-	public void testgetName() {
-		assertEquals("Eliza Luse", person1.getName());
+	public void testgetFirstName() {
+		assertEquals("Eliza", person1.getFirstName());
+	}
+	
+	@Test
+	public void testgetSecondName() {
+		assertEquals("Luse", person1.getSecondName());
 	}
 	
 	@Test
@@ -26,9 +30,15 @@ public class personTest {
 	}
 	
 	@Test
-	public void testsetName() {
-		person1.setName("New Name");
-		assertEquals("New Name", person1.getName());
+	public void testsetFirstName() {
+		person1.setFirstName("New Name");
+		assertEquals("New Name", person1.getFirstName());
+	}
+	
+	@Test
+	public void testsetSecondName() {
+		person1.setSecondName("Other Name");
+		assertEquals("Other Name", person1.getSecondName());
 	}
 	
 	@Test
@@ -39,6 +49,5 @@ public class personTest {
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		System.out.println("Tearomg down person Test");
 	}
 }

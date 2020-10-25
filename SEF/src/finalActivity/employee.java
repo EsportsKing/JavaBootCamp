@@ -15,8 +15,9 @@ public class employee extends person {
 	}
 	
 	// Parameterized employee constructor
-	public employee(String name, int age, String company, String title, int salary) {
-		this.setName(name);
+	public employee(String firstName, String secondName, int age, String company, String title, int salary) {
+		this.setFirstName(firstName);
+		this.setSecondName(secondName);
 		this.setAge(age);
 		this.company = company;
 		this.title = title;
@@ -25,7 +26,7 @@ public class employee extends person {
 	
 	// Introduce function prints message and String name, int age, String title, String company
 	public void introduce() {
-		System.out.println("My name is " + this.getName() + " and I am " + this.getAge() + " years old");
+		System.out.println("My name is " + this.getFirstName() + this.getSecondName() +" and I am " + this.getAge() + " years old");
 		System.out.println("I am working as a " + this.title + " at " + this.company + " company");
 	}
 	

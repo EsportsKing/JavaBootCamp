@@ -3,34 +3,47 @@ package finalActivity;
 public class person {
 
 	// Attributes common to any person
-	private String name;
+	private String firstName;
+	private String secondName;
 	private int age;
 	
 	// Default Constructor
 	public person() {
-		this.name = "Anonymous";
+		this.firstName = "Anonymous";
+		this.secondName = "Anonymous";
 		this.age = 0;
 	}
 	
 	// Parameterized Constructor
-	public person(String name, int age) {
-		this.name = name;
+	public person(String firstName, String secondName, int age) {
+		this.firstName = firstName;
+		this.secondName = secondName;
 		this.age = age;
 	}
 	
 	// Introduce function prints message and String name, int age
 	public void introduce() {
-		System.out.println("My name is " + this.name + " and I am " + this.age + " years old");
+		System.out.println("My name is " + this.firstName + this.secondName +" and I am " + this.age + " years old");
 	}
 	
-	// getter for String name
-	public String getName() {
-		return name;
+	// getter for String firstName
+	public String getFirstName() {
+		return firstName;
 	}
 	
-	// setter for String name
-	public void setName(String name) {
-		this.name = name;
+	// setter for String firstName
+	public void setFirstName(String name) {
+		this.firstName = name;
+	}
+	
+	// getter for String secondName
+	public String getSecondName() {
+		return secondName;
+	}
+	
+	// setter for String secondName
+	public void setSecondName(String name) {
+		this.secondName = name;
 	}
 
 	// getter for int age
