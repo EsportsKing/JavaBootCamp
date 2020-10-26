@@ -1,6 +1,6 @@
 package finalActivity;
 
-public class person {
+public class person extends Humanity{
 
 	// Attributes common to any person
 	private String firstName;
